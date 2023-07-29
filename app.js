@@ -17,6 +17,10 @@ const authenticateUser = require('./middleware/authentication')
 const authRouter = require('./routes/auth')
 const jobsRouter = require('./routes/jobs')
 
+app.get('/', (req, res) => {
+  res.send('Jobs API')
+})
+
 // error handler
 const notFoundMiddleware = require('./middleware/not-found')
 const errorHandlerMiddleware = require('./middleware/error-handler')
